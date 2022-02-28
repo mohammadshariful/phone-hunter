@@ -23,10 +23,10 @@
     <!-- custom css link -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
+  <body class="bg-dark text-white">
     <!-- header section start -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
           <a class="navbar-brand fs-3 fw-bold" href="#">Go Mobile</a>
           <button
@@ -73,12 +73,15 @@
       </nav>
     </header>
     <!-- header section end -->
+   
     <!-- main part start -->
     <main id="main-container">
       <div class="container">
         <!-- input area start -->
-        <h2 class="text-center">Find Your Best Mobile Phone</h2>
-        <div class="input-group my-4 w-75 mx-auto">
+       <div id="input-group">
+         <h3 class="mb-3">Time: <span id="time"> 01:10:30 PM</span></h3>
+          <h2 class="text-center">Find Your Best Mobile Phone</h2>
+          <div class="input-group my-4 w-75 mx-auto">
           <input
             id="search-input"
             type="text"
@@ -91,10 +94,16 @@
             <span> <i class="fa-solid fa-search mx-2"></i> </span> Search
           </button>
         </div>
+        <p class="text-center text-danger fs-4">No Phone Found</p>
+       </div>
         <!-- input area start -->
+        <!-- show loading spinner -->
+        <div class="text-center">
+          <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
         <!-- mobile gallary start -->
         <div  class="my-5">
-          <div id="mobile-gallary" class="row row-cols-1 row-cols-md-4 text-center g-4">
+          <div id="mobile-gallary" class="row row-cols-1 row-cols-lg-3 text-center g-4 text-dark">
             <div class="col">
               <div class="card h-100">
                 <img src="..." class="card-img-top" alt="..." />
@@ -216,6 +225,14 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const updateTime = ()=>{
+      const time = document.getElementById("time");
+      const localTime = new Date().toLocaleTimeString();
+      time.innerText = localTime
+      }
+     setInterval(updateTime,1000)
+    </script>
     <!-- custom js file -->
     <script src="./js/main.js"></script>
   </body>
