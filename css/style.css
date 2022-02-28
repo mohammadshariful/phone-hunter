@@ -14,6 +14,9 @@ nav {
 #main-container {
   margin-top: 100px;
 }
+#error-msg {
+  display: none;
+}
 
 footer {
   background-color: #242b2e;
@@ -33,6 +36,9 @@ ul li {
 
 /* loading spinner 
 */
+#loading-spinner {
+  display: none;
+}
 .lds-spinner {
   color: official;
   display: inline-block;

@@ -90,15 +90,15 @@
             aria-label="Recipient's username"
             aria-describedby="basic-addon2"
           />
-          <button class="input-group-text btn btn-secondary">
+          <button class="input-group-text btn btn-secondary" onclick="searchBtn()">
             <span> <i class="fa-solid fa-search mx-2"></i> </span> Search
           </button>
         </div>
-        <p class="text-center text-danger fs-4">No Phone Found</p>
+        <p id="error-msg" class="text-center text-danger fs-4">No Phone Found</p>
        </div>
         <!-- input area start -->
         <!-- show loading spinner -->
-        <div class="text-center">
+        <div id="loading-spinner" class="text-center">
           <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         </div>
         <!-- mobile gallary start -->
