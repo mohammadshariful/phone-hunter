@@ -20,17 +20,17 @@ const searchBtn = async () => {
   toggle("loading-spinner", "block");
   toggle("error-msg", "none");
   const inputText = getInputValue("search-input");
-  // fetch api
+  // fetch data
   const url = `https://openapi.programming-hero.com/api/phones?search=${inputText}`;
 
-  const res = await fetch(url);
-  const data = await res.json();
+  const response = await fetch(url);
+  const result = await response.json();
   // conditional checking
-  if (data.status === false || inputText === "") {
+  if (result.status === false || inputText === "") {
     toggle("loading-spinner", "none");
     toggle("error-msg", "block");
   } else {
-    displayData(data.data);
+    displayData(result.data);
   }
 };
 // display Data
@@ -61,8 +61,8 @@ const displayData = (phones) => {
 // details btn
 const detailsBtn = async (phoneId) => {
   const url = `https://openapi.programming-hero.com/api/phone/${phoneId}`;
-  const res = await fetch(url);
-  const result = await res.json();
+  const response = await fetch(url);
+  const result = await response.json();
   showResult(result.data);
 };
 // show result pop up
@@ -119,7 +119,10 @@ const showResult = (data) => {
     <tr>
       <td>Sensor</td>
        <td>
-      ${fingerprint},${ultrasonic},${accelerometer},${gyro},${fingerprint},${proximity},${compass},${barometer}
+      ${fingerprint},${ultrasonic},${accelerometer},${gyro},${proximity},${compass},${
+    barometer ? barometer : ""
+  }
+         
        </td>
     </tr>
      <tr>

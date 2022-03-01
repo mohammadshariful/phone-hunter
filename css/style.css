@@ -20,6 +20,7 @@ nav {
 .card {
   border-radius: 10px;
   background-color: #242b2e;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #error-msg {
   display: none;
