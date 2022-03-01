@@ -130,27 +130,27 @@ const showResult = (data) => {
     </tr>
      <tr>
       <td>Bluetooth</td>
-      <td>${Bluetooth ? Bluetooth : ""}</td>
+      <td>${Bluetooth ? Bluetooth : "No Info"}</td>
     </tr>
      <tr>
       <td>GPS</td>
-      <td>${GPS ? GPS : ""}</td>
+      <td>${GPS ? GPS : "No Info"}</td>
     </tr>
      <tr>
       <td>NFC</td>
-      <td>${NFC ? NFC : ""}</td>
+      <td>${NFC ? NFC : "No Info"}</td>
     </tr>
      <tr>
       <td>Radio</td>
-      <td>${Radio ? Radio : ""}</td>
+      <td>${Radio ? Radio : "No Info"}</td>
     </tr>
      <tr>
       <td>USB</td>
-      <td>${USB ? USB : ""}</td>
+      <td>${USB ? USB : "No Info"}</td>
     </tr>
      <tr>
       <td>WLAN</td>
-      <td>${WLAN ? WLAN : ""}</td>
+      <td>${WLAN ? WLAN : "No Info"}</td>
     </tr>
   </tbody>
 </table>  
