@@ -72,7 +72,7 @@ const showResult = (data) => {
     name,
     releaseDate,
     mainFeatures: { chipSet, displaySize, memory, storage },
-    others: { Bluetooth, GPS, NFC, Radio, USB, WLAN },
+    others: { Bluetooth, GPS, NFC, Radio, USB, WLAN } = {},
   } = data;
   const [
     fingerprint,
@@ -130,27 +130,27 @@ const showResult = (data) => {
     </tr>
      <tr>
       <td>Bluetooth</td>
-      <td>${Bluetooth}</td>
+      <td>${Bluetooth ? Bluetooth : ""}</td>
     </tr>
      <tr>
       <td>GPS</td>
-      <td>${GPS}</td>
+      <td>${GPS ? GPS : ""}</td>
     </tr>
      <tr>
       <td>NFC</td>
-      <td>${NFC}</td>
+      <td>${NFC ? NFC : ""}</td>
     </tr>
      <tr>
       <td>Radio</td>
-      <td>${Radio}</td>
+      <td>${Radio ? Radio : ""}</td>
     </tr>
      <tr>
       <td>USB</td>
-      <td>${USB}</td>
+      <td>${USB ? USB : ""}</td>
     </tr>
      <tr>
       <td>WLAN</td>
-      <td>${WLAN}</td>
+      <td>${WLAN ? WLAN : ""}</td>
     </tr>
   </tbody>
 </table>  
